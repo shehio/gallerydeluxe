@@ -1,3 +1,12 @@
+
+{{ $css := resources.Get "css/styles.css" }}
+{{ if hugo.IsProduction}}
+    {{ $css = $css | minify | fingerprint }}
+{{ end }}
+{{ with site.Params.plausible_domain }}
+<script defer data-domain="{{ . }}" src="https://plausible.io/js/plausible.js"></script>
+{{ end }}
+
 {{ $js := resources.Get "js/gallerydeluxe/cdn/index.js" }}
 {{ $js = $js | js.Build (dict "params" site.Params.gallerydeluxe "minify" hugo.IsProduction) }}
 {{ $styles := resources.Get "css/gallerydeluxe/styles.css" }}
