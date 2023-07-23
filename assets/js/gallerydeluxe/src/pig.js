@@ -259,7 +259,7 @@ export function Pig(imageData, options) {
 		 *   user is scrolling down, 1000px worth of images will be loaded below
 		 *   the viewport.
 		 */
-		primaryImageBufferHeight: 1000,
+		primaryImageBufferHeight: 3000,
 
 		/**
 		 * Type: Number
@@ -269,7 +269,7 @@ export function Pig(imageData, options) {
 		 *   the user is scrolling down, 300px worth of images will be loaded
 		 *   above the viewport.  Images further up will be removed.
 		 */
-		secondaryImageBufferHeight: 300,
+		secondaryImageBufferHeight: 3000,
 
 		/**
 		 * Type: Number
