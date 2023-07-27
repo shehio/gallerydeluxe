@@ -644,16 +644,16 @@ Pig.prototype._doLayout = function () {
 	// no, and either insert it or remove it appropriately.
 	this.images.forEach(
 		function (image) {
-			// if (
-			// 	image.style.translateY + image.style.height < minTranslateYPlusHeight ||
-			// 	image.style.translateY > maxTranslateY
-			// ) {
-			// 	// Hide Image
-			// 	image.hide();
-			// } else {
-			// 	// Load Image
-			// 	image.load();
-			// }
+			if (
+				image.style.translateY + image.style.height < minTranslateYPlusHeight ||
+				image.style.translateY > maxTranslateY
+			) {
+				// Hide Image
+				image.hide();
+			} else {
+				// Load Image
+				image.load();
+			}
 
 			image.load();
 		}.bind(this)
