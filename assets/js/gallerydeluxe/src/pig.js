@@ -686,13 +686,13 @@ Pig.prototype._getOnScroll = function () {
 		_this.scrollDirection = _this.latestYOffset > _this.previousYOffset ? 'down' : 'up';
 
 		// Call _this.doLayout, guarded by window.requestAnimationFrame
-		if (!_this.inRAF) {
-			_this.inRAF = true;
-			window.requestAnimationFrame(function () {
-				_this._doLayout();
-				_this.inRAF = false;
-			});
-		}
+		// if (!_this.inRAF) {
+		// 	_this.inRAF = true;
+		// 	window.requestAnimationFrame(function () {
+		// 		_this._doLayout();
+		// 		_this.inRAF = false;
+		// 	});
+		// }
 	};
 
 	return onScroll;
