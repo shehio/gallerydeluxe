@@ -824,9 +824,9 @@ ProgressiveImage.prototype.load = function () {
 		function () {
 			// The image was hidden very quickly after being loaded, so don't bother
 			// loading it at all.
-			// if (!this.existsOnPage) {
-			// 	return;
-			// }
+			if (!this.existsOnPage) {
+				return;
+			}
 
 			// Show thumbnail
 			if (!this.thumbnail) {
@@ -863,7 +863,7 @@ ProgressiveImage.prototype.load = function () {
 				this.getElement().appendChild(this.fullImage);
 			}
 		}.bind(this),
-		1
+		250
 	);
 };
 
