@@ -727,7 +727,7 @@ Pig.prototype.enable = function () {
 				// This happens on orientation change on mobile devices.
 				// this.lastWindowWidth = newWindowWidth;
 				this._computeLayout();
-				// this._doLayout();
+				this._doLayout();
 			}
 		}.bind(this)
 	);
