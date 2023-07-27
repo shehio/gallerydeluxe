@@ -725,7 +725,7 @@ Pig.prototype.enable = function () {
 			let newWindowWidth = windowWidth();
 			if (newWindowWidth !== this.lastWindowWidth) {
 				// This happens on orientation change on mobile devices.
-				// this.lastWindowWidth = newWindowWidth;
+				this.lastWindowWidth = newWindowWidth;
 				this._computeLayout();
 				this._doLayout();
 			}
