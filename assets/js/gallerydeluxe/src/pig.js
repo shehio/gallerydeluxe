@@ -703,11 +703,11 @@ Pig.prototype._getOnScroll = function () {
  * @returns {object} The Pig instance, for easy chaining with the constructor.
  */
 Pig.prototype.enable = function () {
-	this.onScroll = this._getOnScroll();
+	// this.onScroll = this._getOnScroll();
 
-	this.scroller.addEventListener('scroll', this.onScroll);
+	// this.scroller.addEventListener('scroll', this.onScroll);
 
-	this.onScroll();
+	// this.onScroll();
 	this._computeLayout();
 	this._doLayout();
 
